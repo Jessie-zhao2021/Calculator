@@ -7,32 +7,179 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#button-container{
+  display: grid;
+  padding: 0 15px 15px;
+  border-radius: 0 0 15px 15px;
+  background-color: #222327;
+  width: 330px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#display-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 310px;
+  padding: 25px;
+  border-radius: 15px 15px 0 0;
+  background-color: #222327;
+  position: relative;
+}
+
+#display, #result {
+  padding: 5px 0 0 10px;
+  width: 300px;
+  text-align: right;
+  
+}
+
+#display{
+  /* font-size: 20px; */
+  border-radius: 3px 3px 0 0;
+  color:#555;
+  height: 30px;
+}
+
+#result{
   color: white;
+  /* font-size: 42px; */
+  border-radius: 0 0 3px 3px;
+  height: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.dots{
+  position:absolute;
+  display: flex;
+  /* align-items: center; */
+  left:24px; 
+  top: 24px; 
+  .dot{
+    height: 8px;
+    width:8px;
+    border-radius: 50%;
+    margin-right: 8px;
+    &:nth-child(1){
+      background-color: #e75e4e;
+    }
+    &:nth-child(2){
+      background-color: #ebd454;
+    }
+    &:nth-child(3){
+      background-color: #28c840;
+    }
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button{
+  cursor: pointer;
+  font-size: 30px;
+  height: 60px;
+  width: 60px;
+  margin: 5px;
+  border: none;
+  border-radius: 3px;
+  color:white;
+  font-weight: bold;
+  background-color: transparent;
 }
+
+#equals,
+#add,
+#subtract,
+#multiply,
+#divide,
+#clear{
+  color: white;
+  font-weight: normal;
+  border-radius: 30px;
+  background-color: #333;
+}
+
+#zero{
+  grid-column: 2;
+  grid-row: 5;
+}
+
+#decimal{
+  grid-column: 1;
+  grid-row: 5;
+}
+
+#equals{
+  grid-column: 4;
+  grid-row: 3/6;
+  height: auto;
+  background-color: #ff1585;
+}
+
+#one{
+  grid-column: 1;
+  grid-row: 4;
+}
+
+#two{
+  grid-column: 2;
+  grid-row: 4;
+}
+
+#three{
+  grid-column: 3;
+  grid-row: 4;
+}
+
+#four{
+  grid-column: 1;
+  grid-row: 3;
+}
+
+#five{
+  grid-column: 2;
+  grid-row: 3;
+}
+
+#six{
+  grid-column: 3;
+  grid-row: 3;
+}
+
+#seven{
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#eight{
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#nine{
+  grid-column: 3;
+  grid-row: 2;
+}
+
+#add{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#subtract{
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#multiply{
+  grid-column: 4;
+  grid-row: 1;
+}
+
+#divide{
+  grid-column: 4;
+  grid-row: 2;
+}
+
+#clear{
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 24px;
+  color: #ff1585;
+}
+
